@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3%;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 45%;
+  margin: 3% 0;
+}
+.header h1 {
+  font-size: 40px;
+  font-weight: 200;
+}
+.header h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--very-dark-blue);
+  margin-bottom: 2%;
+}
+.header p {
+  font-weight: 600;
+  color: var(--grayish-blue);
+  text-align: center;
+  width: 80%;
+}
+.box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 98%;
+  height: 70%;
+  padding: 2%;
+}
+
+.fluid {
+  height: 47%;
+  width: 360px;
+  border-radius: 3%;
+  transition: transform 0.3s ease;
+}
+.fluid:hover {
+  transform: scale(1.05);
+}
+.col {
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.col h3 {
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--very-dark-blue);
+}
+.col p {
+  color: var(--grayish-blue);
+}
+.img-magnifier {
+  display: flex;
+  position: relative;
+  width: 60px;
+  height: 70px;
+  background-position: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+img {
+  position: absolute;
+  right: -230px;
+  bottom: -20px;
+}
+.team-box {
+  box-shadow: -5px 2px 30px hsl(229, 6%, 66%, 0.5);
+}
+.team-box::before {
+  content: " ";
+  display: block;
+  height: 3%;
+  width: 100%;
+  background-color: var(--cyan);
+}
+.duble-box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.db {
+  display: flex;
+  height: 100%;
+  width: 360px;
+  box-shadow: -5px 3px 20px hsl(229, 6%, 66%, 0.5);
+}
+.team-b {
+  display: flex;
+  flex-direction: column;
+  border-radius: 3%;
+  transition: transform 0.3s ease;
+}
+.team-b::before {
+  content: " ";
+  display: block;
+  height: 3%;
+  width: 100%;
+  background-color: var(--red);
+}
+.img-builder {
+  display: flex;
+  position: relative;
+  width: 60px;
+  height: 70px;
+  background-position: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.img-builder img {
+  position: absolute;
+  right: -260px;
+  top: -50px;
+}
+.karma {
+  margin-top: 10%;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+.karma:hover {
+  transform: scale(1.05);
+}
+.karma::before {
+  content: " ";
+  display: block;
+  height: 3%;
+  width: 100%;
+  background-color: var(--orange);
+}
+.img-karma {
+  display: flex;
+  position: relative;
+  width: 60px;
+  height: 70px;
+  background-position: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.last-box {
+  display: flex;
+  flex-direction: column;
+  box-shadow: -5px 2px 30px hsl(229, 6%, 66%, 0.5);
+}
+.last-box::before {
+  content: " ";
+  display: block;
+  height: 3%;
+  width: 100%;
+  background-color: var(--blue);
+}
+.img-calculator {
+  display: flex;
+  position: relative;
+  width: 60px;
+  height: 70px;
+  background-position: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 1%;
+  }
+  .header {
+    width: 100%;
+    text-align: center;
+  }
+  .header h1 {
+    font-size: 25px;
+  }
+
+  .header h2 {
+    font-size: 25px;
+  }
+
+  .header p {
+    font-size: 14px;
+  }
+
+  .box {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .fluid,
+  .duble-box,
+  .last-box {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+
+  .col {
+    padding: 5%;
+  }
+
+  img {
+    right: -250px;
+    bottom: -10px;
+  }
+  .img-builder img {
+    bottom: -15px;
+    z-index: 999;
+  }
+}
